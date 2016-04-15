@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{AE4D00C4-91C3-78B7-2B6C-BF2948F3BAF6}") = "COMP305_V2SgamesPart2-master", "Assembly-CSharp.csproj", "{EE36BA34-B2F8-B614-3076-0D117F84BA9F}"
+EndProject
+Project("{AE4D00C4-91C3-78B7-2B6C-BF2948F3BAF6}") = "COMP305_V2SgamesPart2-master", "Assembly-CSharp-Editor.csproj", "{5E6C2985-2B4A-6C8A-1C23-36666B5C0983}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE36BA34-B2F8-B614-3076-0D117F84BA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE36BA34-B2F8-B614-3076-0D117F84BA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE36BA34-B2F8-B614-3076-0D117F84BA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE36BA34-B2F8-B614-3076-0D117F84BA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E6C2985-2B4A-6C8A-1C23-36666B5C0983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E6C2985-2B4A-6C8A-1C23-36666B5C0983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E6C2985-2B4A-6C8A-1C23-36666B5C0983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E6C2985-2B4A-6C8A-1C23-36666B5C0983}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
