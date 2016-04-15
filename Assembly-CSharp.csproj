@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\BombController.cs" />
      <Compile Include="Assets\_Scripts\BondaryConrtroller.cs" />
+     <Compile Include="Assets\_Scripts\BondaryConrtroller3.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\GameController2.cs" />
      <Compile Include="Assets\_Scripts\GameController3.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\_Scripts\RoadController2.cs" />
      <Compile Include="Assets\_Scripts\RoadController3.cs" />
      <Compile Include="Assets\_Scripts\SafeController.cs" />
+     <Compile Include="Assets\_Scripts\SafeController3.cs" />
      <Compile Include="Assets\_Scripts\ScoreScript.cs" />
      <Compile Include="Assets\_Scripts\WallController.cs" />
      <Compile Include="Assets\_Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />

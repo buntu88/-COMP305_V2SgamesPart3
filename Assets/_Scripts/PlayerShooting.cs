@@ -24,7 +24,7 @@ public class PlayerShooting : MonoBehaviour
 
     // PRIVATE INSTANCE VARIABLES
     private Transform _transform;
-    private GameController _gameController;
+    public GameController _gameController;
 
 
     // Use this for initialization
@@ -32,7 +32,7 @@ public class PlayerShooting : MonoBehaviour
     {
         this._transform = gameObject.GetComponent<Transform>();
 
-        this._gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent("GameController") as GameController;
+        //this._gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent("GameController") as GameController;
 
     } // end Start
 

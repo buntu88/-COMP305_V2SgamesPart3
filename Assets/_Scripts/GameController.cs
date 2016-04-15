@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
         set
         {
             this._livesValue = value;
-            if (this._livesValue < 0)
+            if (this._livesValue < 1)
             {
                 this._endGame();
                 this._livesValue = 0;
@@ -103,25 +103,26 @@ public class GameController : MonoBehaviour
         if (LivesValue > 0)
         {
             this.ScoreValue += 500;
+            scoreScript.scoreValue = this._scoreValue;
             SceneManager.LoadScene("Instructions2");
 
         }
         else
         {
             this.GameOverLabel.text = "Game Over!!!";
-            this.HighScoreLabel.text = "High Score: " + this._scoreValue;
 
-            this.camera.gameObject.SetActive(true);
-            this.GameOverLabel.gameObject.SetActive(true);
-            this.HighScoreLabel.gameObject.SetActive(true);
-            this.LivesLabel.gameObject.SetActive(false);
-            this.ScoreLabel.gameObject.SetActive(false);
-
-            this._gameOverSound.Play();
-            this.RestartButton.gameObject.SetActive(true);
         }
 
+        this.HighScoreLabel.text = "High Score: " + this._scoreValue;
 
+        this.camera.gameObject.SetActive(true);
+        this.GameOverLabel.gameObject.SetActive(true);
+        this.HighScoreLabel.gameObject.SetActive(true);
+        this.LivesLabel.gameObject.SetActive(false);
+        this.ScoreLabel.gameObject.SetActive(false);
+
+        this._gameOverSound.Play();
+        this.RestartButton.gameObject.SetActive(true);
     }
 
     // PUBLIC METHODS

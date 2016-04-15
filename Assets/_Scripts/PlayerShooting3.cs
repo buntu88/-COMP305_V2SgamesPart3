@@ -18,13 +18,12 @@ public class PlayerShooting3 : MonoBehaviour
     public GameObject metalbulletImpact;
     public GameObject stonebulletImpact;
     public GameObject explosion;
-
+    public GameController3 _gameController;
 
 
 
     // PRIVATE INSTANCE VARIABLES
     private Transform _transform;
-    private GameController3 _gameController;
 
 
     // Use this for initialization
@@ -32,7 +31,7 @@ public class PlayerShooting3 : MonoBehaviour
     {
         this._transform = gameObject.GetComponent<Transform>();
 
-        this._gameController = GameObject.FindGameObjectWithTag("GameController3").GetComponent("GameController3") as GameController3;
+        //this._gameController = GameObject.FindGameObjectWithTag("GameController3").GetComponent("GameController3") as GameController3;
 
     } // end Start
 
@@ -43,7 +42,15 @@ public class PlayerShooting3 : MonoBehaviour
     } // end Update
 
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("TankExplosion"))
+        {
+            this._gameController.LivesValue--;
+        }
 
+
+    }
 
     void FixedUpdate()
     {

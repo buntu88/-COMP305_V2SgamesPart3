@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class InstructionsController3 : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public ScoreScript scoreScript;
+    // Use this for initialization
+    void Start () {
 	
 	}
 	

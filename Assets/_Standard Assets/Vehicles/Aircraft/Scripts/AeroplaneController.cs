@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.Vehicles.Aeroplane
 {
@@ -94,7 +95,16 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private void ClampInputs()
         {
             // clamp the inputs to -1 to 1 range
-            RollInput = Mathf.Clamp(RollInput, -1, 1);
+            if (SceneManager.GetActiveScene().name == "Level3")
+            {
+                RollInput = Mathf.Clamp(RollInput, 0, 1);
+            }
+            else
+            {
+                RollInput = Mathf.Clamp(RollInput, -1, 1);
+            }
+            
+
             PitchInput = Mathf.Clamp(PitchInput, -1, 1);
             YawInput = Mathf.Clamp(YawInput, -1, 1);
             ThrottleInput = Mathf.Clamp(ThrottleInput, -1, 1);

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class ScoreScript : MonoBehaviour {
 
     // PRIVATE INSTANCE VARIABLES
-    public int scoreValue = 0;
-    public int livesValue = 5;
+    public int scoreValue;
+    public int livesValue;
 
     public int ScoreValue
     {

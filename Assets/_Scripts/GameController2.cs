@@ -76,9 +76,6 @@ public class GameController2 : MonoBehaviour
     void Start()
     {
         this._initialize();
-        //Instantiate(this.player, this._playerSpawnPoint, Quaternion.Euler(0, 167, 0));
-        //Vector3 position = new Vector3(Random.Range(-1000.0F, 1000F), Random.Range(0f, 400f), Random.Range(-500F, 1500F));
-        //Instantiate(prefab, position, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -88,10 +85,9 @@ public class GameController2 : MonoBehaviour
         y = Random.Range(0, 50);
         if (x == y)
         {
-            // Vector3 position = new Vector3(Random.Range(-1000.0F, 1000F), Random.Range(0f, 400f), Random.Range(-500F, 1500F));
             Vector3 position = new Vector3(Random.Range(this.player.transform.position.x, this.player.transform.position.x + 200F),
-                                            Random.Range(this.player.transform.position.y - 30f, this.player.transform.position.y + 30F), 
-                                            Random.Range(this.player.transform.position.z - 30f, this.player.transform.position.z + 30F));
+                                            Random.Range(this.player.transform.position.y - 50f, this.player.transform.position.y + 50F), 
+                                            Random.Range(this.player.transform.position.z - 50f, this.player.transform.position.z + 50F));
             Instantiate(prefab, position, Quaternion.identity);
         }
     }
@@ -122,6 +118,7 @@ public class GameController2 : MonoBehaviour
         if (LivesValue > 0)
         {
             this.ScoreValue += 500;
+            scoreScript.scoreValue = this._scoreValue;
             //this.GameOverLabel.text = "You Win!!!";
             SceneManager.LoadScene("Instructions3");
 
@@ -129,19 +126,19 @@ public class GameController2 : MonoBehaviour
         else
         {
             this.GameOverLabel.text = "Game Over!!!";
-            this.HighScoreLabel.text = "High Score: " + this._scoreValue;
 
-            this.camera.gameObject.SetActive(true);
-            this.GameOverLabel.gameObject.SetActive(true);
-            this.HighScoreLabel.gameObject.SetActive(true);
-            this.LivesLabel.gameObject.SetActive(false);
-            this.ScoreLabel.gameObject.SetActive(false);
-
-            this._gameOverSound.Play();
-            this.RestartButton.gameObject.SetActive(true);
         }
 
+        this.HighScoreLabel.text = "High Score: " + this._scoreValue;
 
+        this.camera.gameObject.SetActive(true);
+        this.GameOverLabel.gameObject.SetActive(true);
+        this.HighScoreLabel.gameObject.SetActive(true);
+        this.LivesLabel.gameObject.SetActive(false);
+        this.ScoreLabel.gameObject.SetActive(false);
+
+        this._gameOverSound.Play();
+        this.RestartButton.gameObject.SetActive(true);
 
     }
 

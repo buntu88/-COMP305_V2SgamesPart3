@@ -4,8 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class InstructionsController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public ScoreScript scoreScript;
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
