@@ -2,7 +2,7 @@
     Source File Name: GroundController
     Author's Name: Vishal Guleria 300813391
     Last Modified By: Vishal Guleria 300813391
-    Date Last Modified: 25th March 2016
+    Date Last Modified: 15th April 2016
     Program Description: v8
 */
 using UnityEngine;
@@ -15,8 +15,7 @@ public class GroundController2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       // this._gameController = GameObject.FindGameObjectWithTag("GameController2").GetComponent("GameController2") as GameController2;
-        this._playerSpawnPoint = new Vector3(482f, 67.5f, 2434f);
+this._playerSpawnPoint = new Vector3(-2055.4f, -88.4f, -88.4f);
 
     }
 
@@ -27,11 +26,12 @@ public class GroundController2 : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision other)
-    {
+    {    
+        
 
         Transform playerTransform = other.gameObject.GetComponent<Transform>();
         playerTransform.position = this._playerSpawnPoint;
-        playerTransform.Rotate(0, 167, 0);
+        //playerTransform.Rotate(0, 167, 0);
         this._gameController.LivesValue--;
 
 

@@ -2,7 +2,7 @@
     Source File Name: GameController
     Author's Name: Vishal Guleria 300813391
     Last Modified By: Vishal Guleria 300813391
-    Date Last Modified: 25th March 2016
+    Date Last Modified: 15th April 2016
     Program Descreption: v8
 */
 
@@ -85,11 +85,13 @@ public class GameController2 : MonoBehaviour
         y = Random.Range(0, 50);
         if (x == y)
         {
-            Vector3 position = new Vector3(Random.Range(this.player.transform.position.x, this.player.transform.position.x + 200F),
+            Vector3 position = new Vector3(Random.Range(this.player.transform.position.x, this.player.transform.position.x + 150F),
                                             Random.Range(this.player.transform.position.y - 50f, this.player.transform.position.y + 50F), 
                                             Random.Range(this.player.transform.position.z - 50f, this.player.transform.position.z + 50F));
             Instantiate(prefab, position, Quaternion.identity);
         }
+        if (Input.GetKey(KeyCode.T))
+            SceneManager.LoadScene("Instructions3");
     }
 
     //PRIVATE METHODS ++++++++++++++++++
@@ -97,7 +99,6 @@ public class GameController2 : MonoBehaviour
     //Initial Method
     private void _initialize()
     {
-      //  this._playerSpawnPoint = new Vector3(482f, 67.5f, 2434f);
 
         this.ScoreValue = scoreScript.scoreValue;
         this.LivesValue = scoreScript.livesValue;

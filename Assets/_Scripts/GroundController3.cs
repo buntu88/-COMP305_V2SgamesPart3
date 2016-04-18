@@ -2,7 +2,7 @@
     Source File Name: GroundController
     Author's Name: Vishal Guleria 300813391
     Last Modified By: Vishal Guleria 300813391
-    Date Last Modified: 25th March 2016
+    Date Last Modified: 15th April 2016
     Program Description: v8
 */
 using UnityEngine;
@@ -16,7 +16,7 @@ public class GroundController3 : MonoBehaviour
     void Start()
     {
         //this._gameController = GameObject.FindGameObjectWithTag("GameController3").GetComponent("GameController3") as GameController3;
-        this._playerSpawnPoint = new Vector3(482f, 67.5f, 2434f);
+        this._playerSpawnPoint = new Vector3(-138f, -25f, -3505f);
 
     }
 

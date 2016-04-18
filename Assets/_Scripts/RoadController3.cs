@@ -2,7 +2,7 @@
     Source File Name: GameController
     Author's Name: Vishal Guleria 300813391
     Last Modified By: Vishal Guleria 300813391
-    Date Last Modified: 25th March 2016
+    Date Last Modified: 15th April 2016
     Program Descreption: v8
 */
 
@@ -10,11 +10,11 @@ using UnityEngine;
 
 public class RoadController3 : MonoBehaviour
 {
-    private GameController3 _gameController;
+    public GameController3 _gameController;
     // Use this for initialization
     void Start()
     {
-        this._gameController = GameObject.FindGameObjectWithTag("GameController3").GetComponent("GameController3") as GameController3;
+        //this._gameController = GameObject.FindGameObjectWithTag("GameController3").GetComponent("GameController3") as GameController3;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class RoadController3 : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
-        this._gameController._endGame();
+        _gameController._endGame();
         Destroy(other.gameObject);
 
     }

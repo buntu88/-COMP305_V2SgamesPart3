@@ -2,7 +2,7 @@
     Source File Name: GameController
     Author's Name: Vishal Guleria 300813391
     Last Modified By: Vishal Guleria 300813391
-    Date Last Modified: 25th March 2016
+    Date Last Modified: 15th April 2016
     Program Descreption: v8
 */
 
@@ -76,7 +76,19 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKey(KeyCode.R))
+        {
+            scoreScript.scoreValue = this._scoreValue;
+            scoreScript.livesValue = this._livesValue;
+            SceneManager.LoadScene("Instructions2");
+        }
+            
+        if (Input.GetKey(KeyCode.T))
+        {
+            scoreScript.scoreValue = this._scoreValue;
+            scoreScript.livesValue = this._livesValue;
+            SceneManager.LoadScene("Instructions3");
+        }
     }
 
     //PRIVATE METHODS ++++++++++++++++++
