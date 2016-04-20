@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP305_V2SgamesPart.CSharp", "COMP305_V2SgamesPart.CSharp.csproj", "{EECD1F99-CBA4-8E9C-C727-71412BAB2784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP305_V2SgamesPart.CSharp.Editor", "COMP305_V2SgamesPart.CSharp.Editor.csproj", "{00540F00-7132-A3DD-21FB-C5B76F8CAC63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EECD1F99-CBA4-8E9C-C727-71412BAB2784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECD1F99-CBA4-8E9C-C727-71412BAB2784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECD1F99-CBA4-8E9C-C727-71412BAB2784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECD1F99-CBA4-8E9C-C727-71412BAB2784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00540F00-7132-A3DD-21FB-C5B76F8CAC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00540F00-7132-A3DD-21FB-C5B76F8CAC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00540F00-7132-A3DD-21FB-C5B76F8CAC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00540F00-7132-A3DD-21FB-C5B76F8CAC63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private AudioSource _gameOverSound;
+    private bool isActive;
 
     // PUBLIC ACCESS METHODS
     public int ScoreValue
@@ -102,7 +103,7 @@ public class GameController : MonoBehaviour
         this.HighScoreLabel.gameObject.SetActive(false);
         this.RestartButton.gameObject.SetActive(false);
         this.camera.gameObject.SetActive(false);
-        //this.player.gameObject.SetActive(true);
+        
 
     }
 
@@ -132,9 +133,10 @@ public class GameController : MonoBehaviour
         this.HighScoreLabel.gameObject.SetActive(true);
         this.LivesLabel.gameObject.SetActive(false);
         this.ScoreLabel.gameObject.SetActive(false);
-
+        this.player.gameObject.SetActive(false);
         this._gameOverSound.Play();
         this.RestartButton.gameObject.SetActive(true);
+        this.isActive = true;
     }
 
     // PUBLIC METHODS

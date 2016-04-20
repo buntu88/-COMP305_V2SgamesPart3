@@ -20,7 +20,7 @@ public class GameController2 : MonoBehaviour
     public GameObject prefab;
     private int x;
     private int y;
-
+    private bool isActive;
     [SerializeField]
     private AudioSource _gameOverSound;
 
@@ -81,17 +81,20 @@ public class GameController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        x = Random.Range(0, 50);
-        y = Random.Range(0, 50);
-        if (x == y)
+        if (this.isActive)
         {
-            Vector3 position = new Vector3(Random.Range(this.player.transform.position.x, this.player.transform.position.x + 150F),
-                                            Random.Range(this.player.transform.position.y - 50f, this.player.transform.position.y + 50F), 
-                                            Random.Range(this.player.transform.position.z - 50f, this.player.transform.position.z + 50F));
-            Instantiate(prefab, position, Quaternion.identity);
+            x = Random.Range(0, 50);
+            y = Random.Range(0, 50);
+            if (x == y)
+            {
+                Vector3 position = new Vector3(Random.Range(this.player.transform.position.x, this.player.transform.position.x + 150F),
+                                                Random.Range(this.player.transform.position.y - 50f, this.player.transform.position.y + 50F),
+                                                Random.Range(this.player.transform.position.z - 50f, this.player.transform.position.z + 50F));
+                Instantiate(prefab, position, Quaternion.identity);
+            }
+            if (Input.GetKey(KeyCode.T))
+                SceneManager.LoadScene("Instructions3");
         }
-        if (Input.GetKey(KeyCode.T))
-            SceneManager.LoadScene("Instructions3");
     }
 
     //PRIVATE METHODS ++++++++++++++++++
@@ -107,8 +110,8 @@ public class GameController2 : MonoBehaviour
         this.RestartButton.gameObject.SetActive(false);
         this.camera.gameObject.SetActive(false);
         this.WarningLabel.gameObject.SetActive(false);
-        //this.player.gameObject.SetActive(true);
-
+        this.player.gameObject.SetActive(true);
+        this.isActive = true;
     }
 
     //End Game Method
@@ -137,10 +140,10 @@ public class GameController2 : MonoBehaviour
         this.HighScoreLabel.gameObject.SetActive(true);
         this.LivesLabel.gameObject.SetActive(false);
         this.ScoreLabel.gameObject.SetActive(false);
-
+        this.player.SetActive(false);
         this._gameOverSound.Play();
         this.RestartButton.gameObject.SetActive(true);
-
+        this.isActive = false;
     }
 
     // PUBLIC METHODS

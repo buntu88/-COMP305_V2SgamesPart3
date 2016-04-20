@@ -20,6 +20,7 @@ public class GameController3 : MonoBehaviour
     public GameObject prefab;
     private int x;
     private int y;
+    private bool isActive;
 
     [SerializeField]
     private AudioSource _gameOverSound;
@@ -82,15 +83,18 @@ public class GameController3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        x = Random.Range(0, 100);
-        y = Random.Range(0, 100);
-        if (x == y)
-        {
-            // Vector3 position = new Vector3(Random.Range(-1000.0F, 1000F), Random.Range(0f, 400f), Random.Range(-500F, 1500F));
-            Vector3 position = new Vector3(Random.Range(this.player.transform.position.x, this.player.transform.position.x + 200F),
-                                            Random.Range(this.player.transform.position.y - 50f, this.player.transform.position.y + 50F),
-                                            Random.Range(this.player.transform.position.z - 50f, this.player.transform.position.z + 50F));
-            Instantiate(prefab, position, Quaternion.identity);
+        
+            if (this.isActive) { 
+            x = Random.Range(0, 100);
+            y = Random.Range(0, 100);
+            if (x == y)
+            {
+                // Vector3 position = new Vector3(Random.Range(-1000.0F, 1000F), Random.Range(0f, 400f), Random.Range(-500F, 1500F));
+                Vector3 position = new Vector3(Random.Range(this.player.transform.position.x, this.player.transform.position.x + 200F),
+                                                Random.Range(this.player.transform.position.y - 50f, this.player.transform.position.y + 50F),
+                                                Random.Range(this.player.transform.position.z - 50f, this.player.transform.position.z + 50F));
+                Instantiate(prefab, position, Quaternion.identity);
+            }
         }
     }
 
@@ -108,7 +112,8 @@ public class GameController3 : MonoBehaviour
         this.RestartButton.gameObject.SetActive(false);
         this.camera.gameObject.SetActive(false);
         this.WarningLabel.gameObject.SetActive(false);
-        //this.player.gameObject.SetActive(true);
+        this.player.gameObject.SetActive(true);
+        this.isActive = true;
 
     }
 
@@ -141,7 +146,7 @@ public class GameController3 : MonoBehaviour
         this.HighScoreLabel.gameObject.SetActive(true);
         this.LivesLabel.gameObject.SetActive(false);
         this.ScoreLabel.gameObject.SetActive(false);
-
+        this.isActive = false;
         this._gameOverSound.Play();
         this.RestartButton.gameObject.SetActive(true);
 
